@@ -78,10 +78,10 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': '<your-database-name>',
-        'USER': '<your-database-user>',
-        'PASSWORD': '<your-database-password>',
-        'HOST': '<your-database-host>',
+        'NAME': 'test_django_deploy_db',
+        'USER': 'newguy',
+        'PASSWORD': 'newguypassword',
+        'HOST': '173.194.231.97',
         'PORT': '3306',
     }
 }
@@ -107,7 +107,7 @@ USE_TZ = True
 # Fill in your cloud bucket and switch which one of the following 2 lines
 # is commented to serve static content from GCS
 # STATIC_URL = 'https://storage.googleapis.com/<your-cloud-bucket>/static/'
-STATIC_URL = '/static/'
+STATIC_URL = 'http://storage.googleapis.com/test-django-deploy-bucket/static/'
 # [END staticurl]
 
 STATIC_ROOT = 'static/'
